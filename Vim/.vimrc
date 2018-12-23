@@ -76,3 +76,12 @@ set foldmethod=manual
 autocmd BufWinLeave ?* silent mkview
 " ビューの自動復元
 autocmd BufWinEnter ?* silent loadview
+
+" =======================================================
+" 追加プラグイン用
+" =======================================================
+
+" PDV - phpDocumentor for Vim
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
+nnoremap <C-P> :call PhpDocSingle()<CR> 
+vnoremap <C-P> :call PhpDocRange()<CR> 
