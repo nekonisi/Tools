@@ -82,6 +82,7 @@ autocmd BufWinEnter ?* silent loadview
 " =======================================================
 
 " PDV - phpDocumentor for Vim
+source ~/.vim/php-doc.vim
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
 nnoremap <C-P> :call PhpDocSingle()<CR> 
 vnoremap <C-P> :call PhpDocRange()<CR> 
