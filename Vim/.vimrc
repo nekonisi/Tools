@@ -86,3 +86,20 @@ source ~/.vim/php-doc.vim
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
 nnoremap <C-P> :call PhpDocSingle()<CR> 
 vnoremap <C-P> :call PhpDocRange()<CR> 
+
+" =======================================================
+" バッファ移動
+" =======================================================
+
+inoremap <C-Right> <ESC> :bn <CR>
+nnoremap <C-Right> :bn <CR>
+vnoremap <C-Right> :bn <CR>
+inoremap <C-Left> <ESC> :bp <CR>
+nnoremap <C-Left> :bp <CR>
+vnoremap <C-Left> :bp <CR>
+
+" =======================================================
+" ペーストモード対策
+" =======================================================
+
+autocmd InsertLeave * set nopaste
