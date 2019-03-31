@@ -22,7 +22,7 @@ set showcmd
 " 行番号を表示
 set number
 " 現在の行を強調表示
-set cursorline
+"set cursorline
 " 行末の1文字先までカーソルを移動できるように
 set virtualedit=onemore
 " インデントはスマートインデント
@@ -97,9 +97,33 @@ vnoremap <C-Right> :bn <CR>
 inoremap <C-Left> <ESC> :bp <CR>
 nnoremap <C-Left> :bp <CR>
 vnoremap <C-Left> :bp <CR>
+inoremap <C-c> <ESC> :bd! <CR>
+nnoremap <C-c> :bd! <CR>
+vnoremap <C-c> :bd! <CR>
 
 " =======================================================
 " ペーストモード対策
 " =======================================================
 
 autocmd InsertLeave * set nopaste
+
+" =======================================================
+" 矢印キー無効化
+" =======================================================
+
+function! HardMode ()
+	noremap <Up> <Nop>
+	noremap <Down> <Nop>
+	noremap <Left> <Nop>
+	noremap <Right> <Nop>
+endfunction
+
+function! EasyMode ()
+	noremap <Up> <Up>
+	noremap <Down> <Down>
+	noremap <Left> <Left>
+	noremap <Right> <Right>
+endfunction
+
+command! HardMode call HardMode()
+
