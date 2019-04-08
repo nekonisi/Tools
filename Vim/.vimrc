@@ -43,9 +43,9 @@ nnoremap k gk
 " Tab系
 " =======================================================
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
-set tabstop=2
+set tabstop=4
 " 行頭でのTab文字の表示幅
-set shiftwidth=2
+set shiftwidth=4
 
 " =======================================================
 " 検索系
@@ -82,10 +82,10 @@ autocmd BufWinEnter ?* silent loadview
 " =======================================================
 
 " PDV - phpDocumentor for Vim
-source ~/.vim/php-doc.vim
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <C-P> :call PhpDocSingle()<CR> 
-vnoremap <C-P> :call PhpDocRange()<CR> 
+" source ~/.vim/php-doc.vim
+" inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
+" nnoremap <C-P> :call PhpDocSingle()<CR> 
+" vnoremap <C-P> :call PhpDocRange()<CR> 
 
 " =======================================================
 " バッファ移動
